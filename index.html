@@ -12,12 +12,14 @@
         gtag('config', 'UA-172747256-3');
         gtag('set', { 'user_id': 'test123' }); // 使用已登入的 user_id 設定 User ID。
         // Maps 'dimension2' to 'age'.
-        gtag('config', 'UA-172747256-3', {
-            'custom_map': { 'dimension2': 'age' }
-        });
+        // gtag('config', 'UA-172747256-3', {
+        //     'custom_map': { 'dimension2': 'age' }
+        // });
 
         // Sends an event that passes 'age' as a parameter.
-        gtag('event', 'age_dimension', { 'dimension3': 80 });
+        // gtag('event', 'age_dimension', { 'dimension3': 80 });
+        gtag('set', { 'dimension1': 0000022222123, 'dimension3': 1145855});
+        gtag('config', 'UA-172747256-3', { 'page_path' : pageTitle ,'custom_map' : { 'dimension2' : 'client_id' } } );
     </script>
 
     <meta charset="UTF-8">
