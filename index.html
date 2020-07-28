@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172747256-3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);console.log(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172747256-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); console.log(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'UA-172747256-3');
-  gtag('set', {'user_id': 'test123'}); // 使用已登入的 user_id 設定 User ID。
-</script>
+        gtag('config', 'UA-172747256-3');
+        gtag('set', { 'user_id': 'test123' }); // 使用已登入的 user_id 設定 User ID。
+        // Maps 'dimension2' to 'age'.
+        gtag('config', 'UA-172747256-3', {
+            'custom_map': { 'dimension2': 'age' }
+        });
+
+        // Sends an event that passes 'age' as a parameter.
+        gtag('event', 'age_dimension', { 'age': 55 });
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Hello World!</h1>
 
 </body>
+
 </html>
