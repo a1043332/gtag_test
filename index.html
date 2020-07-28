@@ -8,8 +8,12 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); console.log(arguments); }
         gtag('js', new Date());
+
+        // gtag('set', { 'dimension1': 'client_id', 'dimension3': 1145855,'user_id': 'test123','qqq':50 });
+        // gtag('config', 'UA-172747256-3', { 'custom_map' : { 'dimension2' : 'qqq' } } );
         gtag('set', { 'dimension1': 'client_id', 'dimension3': 1145855,'user_id': 'test123','qqq':50 });
-        gtag('config', 'UA-172747256-3', { 'custom_map' : { 'dimension2' : 'qqq' } } );
+        gtag('config', 'UA-172747256-3',  {'dimension1': 'client_id', 'dimension3': 1145855, 'dimension2' : 'qqq' }  );
+
         // gtag('config', 'UA-172747256-3');
        // 使用已登入的 user_id 設定 User ID。
         // Maps 'dimension2' to 'age'.
